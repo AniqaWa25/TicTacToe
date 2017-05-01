@@ -146,6 +146,10 @@ function hoverColor(number){
 	}
 }
 
+function hideButton(buttonID){
+	document.getElementById('buttonID').style.visibility = 'hidden';
+}
+
 function endGame(){
 	var endGame = false;
 	var count = 0;

@@ -33,10 +33,13 @@ canvas{
 }
 
 #battle-field{}
-#startOver{}
+#startOver{
+    text-align: center;
+}
 
 #restartButton{
-    right: 50;
+    right: 45%;
+    top: 68%;
    /* margin-right: auto;
     margin-left: auto;*/
     position:absolute;
@@ -46,6 +49,7 @@ canvas{
     background-color: black;
     color: white;
     width: 10%;
+    height: 4%;
 
 }
 
