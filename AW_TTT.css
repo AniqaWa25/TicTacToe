@@ -1,6 +1,5 @@
 /*AW_TTT.css*/
 
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -33,26 +32,21 @@ canvas{
     text-align: center;
 }
 
-#battle-field{
-
-}
-
-#startOver{
-    /*margin-right: auto;
-    margin-left: auto;*/
-
-}
-
-#startOverButton{
-    right: 50;
-    width: 100;
-    margin-right: auto;
-    margin-left: auto;
-
-}
+#battle-field{}
+#startOver{}
 
 #restartButton{
-    margin-right: auto;
-    margin-left: auto;
+    right: 50;
+   /* margin-right: auto;
+    margin-left: auto;*/
+    position:absolute;
+    margin: 0 auto;
+    border-width: 1px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    width: 10%;
 
 }
+
+

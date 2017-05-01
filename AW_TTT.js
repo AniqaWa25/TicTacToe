@@ -1,7 +1,4 @@
 // AW_TTT.js
-// var x = document.getElementById("myTable");
-
-console.log("Are we reaching the js??");
 
 setInterval(function(){
 	var da = new Date();
@@ -23,7 +20,6 @@ setInterval(function(){
 
 
 function startGame(){
-
 	clearBoard();
 
 	var computerPlayer;
@@ -50,21 +46,15 @@ function startGame(){
 	if(player1 == "O"){
 		player2 = "X";
 		computerPlayer = "X";
-		gameTextLine2("Player 2, you have chosen " + player2);
+		gameTextLine2("Player 2, you have been given " + player2);
 	} else {
 		player2 = "O";
 		computerPlayer = "O";
-		gameTextLine2("Player 2, you have chosen " + player2);
+		gameTextLine2("Player 2, you have been given " + player2);
 	}
 
-
-	console.log("player 1 is: "+ player1+ " and player 2 is: "+ player2);
+	// console.log("player 1 is: "+ player1+ " and player 2 is: "+ player2);
 	document.turn = player1;
-
-	// if(Math.random() < 0.5){
-	// 	document.turn = player2;
-	// } // 50% of the time player 2 will go. 
-
 	document.winner = null;
 	setMessage(document.turn + " is starting.");
 }
@@ -84,12 +74,17 @@ function setMessage(message){
 
 function nextMove(boardBox){
 	if(document.winner != null){
-		setMessage("The game has already been won by " + document.winner +"!");
+		setMessage("The game has already been won by " + document.winner +"! Would you like to restart?");
 	} else if(boardBox.innerText == ""){
 		boardBox.innerText = document.turn;
+		// hoverColor();
 		switchTurn();
 	} else {
-		setMessage1("That spot is already taken! Try again.")
+		if(endGame()){
+			setMessage("No more playable moves! Game over! Would you like to restart?");
+		} else{
+			setMessage("That spot is already taken! Try again.")
+		}
 	}
 }
 
@@ -133,7 +128,6 @@ function checkForWinner(move){
 
 function clearBox(number){
 	document.getElementById("box"+number).innerText = "";
-	// getBox(number) = "";
 }
 
 function clearBoard(){
@@ -142,23 +136,28 @@ function clearBoard(){
 	}
 	gameText("");
 	setMessage("");
-
-	console.log ("Are we clearing the board?");
-
 }
 
-function changeColor(colorName){
-	backgroundColor = colorName;
+function hoverColor(number){
+	if(document.turn == "X"){
+		document.getElementById("box"+number).style.backgroundColor = "#ffff99";
+	} else {
+		document.getElementById("box"+number).style.backgroundColor = "#ccffcc";
+	}
 }
 
 function endGame(){
 	var endGame = false;
+	var count = 0;
+
 	for(var i=1; i<=9; i++){
 		if(getBox(i) != ""){
-			endGame = true;
+			count++;
+			if(count == 9){
+				endGame = true;
+			}
 		}
 	}
-	gameText("No more playable moves! Game over!");
 	return endGame;
 }
 

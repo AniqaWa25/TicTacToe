@@ -5,16 +5,11 @@
 
 		<head>
 			<title> Let's Play a Game?</title>
-			<link rel="stylesheet" href="AW_TTT.css">
-			
-			<script src="AW_TTT.js"></script>
+			<link rel="stylesheet" href="AW_TTT.css"> 
 		</head>
 
 
 		<body onload="startGame();" >
-
-			 <script src="AW_TTT.js"></script>
-
 			<div  style="text-align: center">
 				<span id="hours"></span>
 				:
@@ -26,19 +21,18 @@
 			</div>
 
 			<div id="title-text">
-				<h1>The </h1>
-				<h2>Very Basic</h2>
-				<h3> Tic - Tac - Toe!</h3>
+				<h2>Just Classic</h2>
+				<h3>Tic - Tac - Toe!</h3>
+				<br>
 				<h4 id="text"> Game Text Here</h4>
 				<h4 id="text2"> Player 2 Turn Here </h4>
 				<h5 id="turn1"> Player 1 Turn Here </h5>
-				
 			</div>
 
 			<div id="battle-field">
 				<table border="5">
 					<tr>
-					    <td id="box1" onclick="nextMove(this);"></td> 
+					    <td id="box1" onclick="nextMove(this);"></td>
 					    <td id="box2" onclick="nextMove(this);"></td>
 					    <td id="box3" onclick="nextMove(this);"></td>
 					</tr>
@@ -55,25 +49,11 @@
 				</table>
 			</div>
 
-			<!-- <div id ="canvas-battle-field"> -->
-				<!-- <canvas id="box1" onClick="canvasClicked" />
-				<canvas id="box2" onClick="canvasClicked" />
-				<canvas id="box3" onClick="canvasClicked" />
-				<canvas id="box4" onClick="canvasClicked" />
-				<canvas id="box5" onClick="canvasClicked" />
-				<canvas id="box6" onClick="canvasClicked" />
-				<canvas id="box7" onClick="canvasClicked" />
-				<canvas id="box8" onClick="canvasClicked" />
-				<canvas id="box9" onClick="canvasClicked" /> -->
-			<!-- </div> -->
-
 			<div id="startOver">
-				<!-- <button id="startOverButton" type="button" onclick="clearBoard()"> Start Over? </button> -->
 				<button id="restartButton" type="button" onclick="startGame()"> Restart? </button>
-
 			</div>
 
 
-			
+			<script src="AW_TTT.js"></script>
 		</body>
 	</html>
