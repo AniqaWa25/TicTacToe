@@ -1,0 +1,75 @@
+<!-- AW_TTT.html -->
+
+<!doctype html>
+	<html>
+
+		<head>
+			<title> Let's Play a Game?</title>
+			<link rel="stylesheet" href="AW_TTT.css">
+			
+			<script src="AW_TTT.js"></script>
+		</head>
+
+
+		<body onload="startGame();" >
+
+			 <script src="AW_TTT.js"></script>
+
+			<div  style="text-align: center">
+				<span id="hours"></span>
+				:
+				<span id="minutes"></span>
+				:
+				<span id="seconds"></span>
+				.
+				<span id="milliseconds"></span> 
+			</div>
+
+			<div id="title-text">
+				<h1>The </h1>
+				<h2>Very Basic</h2>
+				<h3> Tic - Tac - Toe!</h3>
+				<h4 id="demo"> Date here?</h4>
+				<h5 id="turn"> Player Turn Here </h5>
+			</div>
+
+			<div id="battle-field">
+				<table border="5">
+					<tr>
+					    <td id="box1" onclick="nextMove(this);"></td> 
+					    <td id="box2" onclick="nextMove(this);"></td>
+					    <td id="box3" onclick="nextMove(this);"></td>
+					</tr>
+					<tr>
+					    <td id="box4" onclick="nextMove(this);"></td>
+						<td id="box5" onclick="nextMove(this);"></td>
+						<td id="box6" onclick="nextMove(this);"></td>
+					</tr>
+					<tr>
+					    <td id="box7" onclick="nextMove(this);"></td>
+						<td id="box8" onclick="nextMove(this);"></td>
+					    <td id="box9" onclick="nextMove(this);"></td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- <div id ="canvas-battle-field"> -->
+				<!-- <canvas id="box1" onClick="canvasClicked" />
+				<canvas id="box2" onClick="canvasClicked" />
+				<canvas id="box3" onClick="canvasClicked" />
+				<canvas id="box4" onClick="canvasClicked" />
+				<canvas id="box5" onClick="canvasClicked" />
+				<canvas id="box6" onClick="canvasClicked" />
+				<canvas id="box7" onClick="canvasClicked" />
+				<canvas id="box8" onClick="canvasClicked" />
+				<canvas id="box9" onClick="canvasClicked" /> -->
+			<!-- </div> -->
+
+			<div id="startOver">
+				<button type="button" onclick="clearBoard()"> Start Over? </button>
+			</div>
+
+
+			
+		</body>
+	</html>
