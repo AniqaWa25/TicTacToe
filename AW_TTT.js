@@ -12,9 +12,9 @@ setInterval(function(){
 
 	var minutes = da.getMinutes();
 	if(minutes % 2 === 0){
-		document.body.style.backgroundColor = "#6495ED"
+		document.body.style.backgroundColor = "#b3b3ff"
 	} else {
-		document.body.style.backgroundColor = "pink"
+		document.body.style.backgroundColor = "#9999ff"
 	}
 }, 1000);
 
